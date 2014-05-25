@@ -1,1 +1,1 @@
-web: gunicorn mylife:app
+web: gunicorn mylife.wsgi

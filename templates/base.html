@@ -1,0 +1,140 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>{% block title %}Traces {LIFE}{% endblock %}</title>
+  <!-- Meta Data -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8 "/>
+  <meta name="description" content="Traces {LIFE}"/>
+  <meta name="author" content="Ashok Raja R (ashokraja.r@gmail.com)"/>
+  <meta name="keywords" content="AshokRaja, ashokraja, ashok, raja"/>
+  <meta name="copyright" content="Copyright (c) 2014 Ashok Raja R"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+  <!-- Style Sheets (CSS) -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Fav Icon -->
+  <link rel='shortcut icon' href="{% static "media/favicon.ico" %}"></link>
+</head>
+
+<body>
+<div class="container-fluid">
+  <!-- Header -->
+  {% block header %}
+    <div class="row">
+      <div class="col-sm-3">
+        <h1>Traces {Life}</h1>
+        <small>
+          <button type="button" class="btn btn-success disabled">Live</button>
+          <button type="button" class="btn btn-danger disabled">Die</button>
+          <button type="button" class="btn btn-warning disabled">
+            <i class="fa fa-arrow-left"></i>&nbsp; Repeat</button>
+        </small>
+      </div>
+      <div class="col-sm-9">
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse"
+                      data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">
+                <i class="fa fa-home fa-fw"></i>&nbsp; Home
+              </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li>
+                  <a href="#">
+                    <i class="fa fa-road"></i>&nbsp; </span> Fav Places
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container-fluid -->
+        </nav>
+      </div>
+    </div>
+  {% endblock %}
+
+  <div class="row">
+    <!-- SideBar -->
+    <div class="col-sm-3">
+    {% block sidebar %}
+      <div class="row">
+        <div class="col-sm-12">
+          <h3><i class="fa fa-male"></i>&nbsp; ????</h3>
+          <p>Love to solve problems. Technology enthusiats.<br><br>Otherwise exploring the mountains and riding my wheels!!</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+            <ul id="sidebar" class="nav nav-stacked affix">
+              <li>
+                <a href="https://www.facebook.com/ashokrajar">
+                  <i class="fa fa-facebook-square fa-2x"></i>&nbsp; Facebook
+                </a>
+              </li>
+              <li>
+                <a href="http://in.linkedin.com/in/ashokrajar">
+                  <i class="fa fa-linkedin-square fa-2x"></i>&nbsp; LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/ashokrajar">
+                  <i class="fa fa-github-square fa-2x"></i>&nbsp; GitHub
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/ashokraja_r">
+                  <i class="fa fa-twitter-square fa-2x"></i>&nbsp; Twitter
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      {% endblock %}
+      </div>
+
+    <!-- Content -->
+    <div class="col-sm-8">
+    {% block content %}{% endblock %}
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+{% block footer %}
+  <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container-fluid">
+      <p class="muted credit">
+        <span class="glyphicon glyphicon-copyright-mark"></span>
+        Ashok Raja 2014</p>
+    </div>
+  </nav>
+{% endblock %}
+
+<!-- Java Scripts -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
