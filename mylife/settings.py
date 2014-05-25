@@ -10,6 +10,8 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import dj_database_url
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -66,7 +68,8 @@ WSGI_APPLICATION = 'mylife.wsgi.application'
 # }
 
 DATABASES = {
-    'default': {
+    'default': dj_database_url.config(),
+    'mongodb': {
         'ENGINE': 'django_mongodb_engine',
         'NAME': os.environ.get('MONGOLAB_DBNAME'),
         'USER': os.environ.get('MONGOLAB_USER'),
