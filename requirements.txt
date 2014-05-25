@@ -13,4 +13,3 @@ pystache==0.5.4
 static==1.0.2
 wsgiref==0.1.2
 django-mongodb-engine==0.5.1
-dj-database-url==0.3.0
