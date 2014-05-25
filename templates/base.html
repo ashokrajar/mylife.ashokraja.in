@@ -13,14 +13,15 @@
   <meta name="copyright" content="Copyright (c) 2014 Ashok Raja R"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-
   <!-- Style Sheets (CSS) -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Custom styles -->
+  <link href="{% static "css/sticky-footer.css" %}" rel="stylesheet">
 
   <!-- Fav Icon -->
-  <link rel='shortcut icon' href="{% static "media/favicon.ico" %}"></link>
+  <link rel='shortcut icon' href="{% static "media/favicon.ico" %}">
 </head>
 
 <body>
@@ -34,7 +35,7 @@
           <button type="button" class="btn btn-success disabled">Live</button>
           <button type="button" class="btn btn-danger disabled">Die</button>
           <button type="button" class="btn btn-warning disabled">
-            <i class="fa fa-arrow-left"></i>&nbsp; Repeat</button>
+            <i class="fa fa-refresh fa-spin"></i></i>&nbsp; Repeat</button>
         </small>
       </div>
       <div class="col-sm-9">
@@ -72,7 +73,9 @@
     </div>
   {% endblock %}
 
+  <!-- Content -->
   <div class="row">
+
     <!-- SideBar -->
     <div class="col-sm-3">
     {% block sidebar %}
@@ -80,7 +83,7 @@
       <div class="row">
         <div class="col-sm-12" style="padding-top: 2em">
           <h3><i class="fa fa-male"></i>&nbsp; ????</h3>
-          <p>Love to solve problems. Technology enthusiats.<br><br>Otherwise exploring the mountains and riding my wheels!!</p>
+          <p>Love to solve problems. Technology enthusiast.<br><br>Otherwise exploring the mountains and riding my wheels!!</p>
         </div>
       </div>
       <!-- Social -->
@@ -88,22 +91,22 @@
         <div class="col-sm-12" style="padding-top: 2em">
           <ul id="sidebar" class="nav nav-stacked affix">
             <li>
-              <a href="https://www.facebook.com/ashokrajar">
+              <a href="https://www.facebook.com/ashokrajar" target="_blank">
                 <i class="fa fa-facebook-square fa-2x"></i>&nbsp; Facebook
               </a>
             </li>
             <li>
-              <a href="http://in.linkedin.com/in/ashokrajar">
+              <a href="http://in.linkedin.com/in/ashokrajar" target="_blank">
                 <i class="fa fa-linkedin-square fa-2x"></i>&nbsp; LinkedIn
               </a>
             </li>
             <li>
-              <a href="https://github.com/ashokrajar">
+              <a href="https://github.com/ashokrajar" target="_blank">
                 <i class="fa fa-github-square fa-2x"></i>&nbsp; GitHub
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/ashokraja_r">
+              <a href="https://twitter.com/ashokraja_r" target="_blank">
                 <i class="fa fa-twitter-square fa-2x"></i>&nbsp; Twitter
               </a>
             </li>
@@ -117,19 +120,20 @@
     <div class="col-sm-8">
     {% block content %}{% endblock %}
     </div>
+
   </div>
 
 </div>
 
 <!-- Footer -->
 {% block footer %}
-  <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-    <div class="container-fluid">
-      <p class="muted credit">
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">
         <span class="glyphicon glyphicon-copyright-mark"></span>
         Ashok Raja 2014</p>
     </div>
-  </nav>
+  </div>
 {% endblock %}
 
 <!-- Java Scripts -->
