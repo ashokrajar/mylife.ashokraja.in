@@ -38,12 +38,14 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'opbeat.contrib.django',
     # 'storages',
     'mylife',
     'home',
 )
 
 MIDDLEWARE_CLASSES = (
+    'opbeat.contrib.django',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -111,3 +113,9 @@ STATICFILES_DIRS = (
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates')
 )
+
+OPBEAT = {
+    'ORGANIZATION_ID': '6e87d079ac0b48f7a550e487ded732ea',
+    'APP_ID': 'f285b6a8e5',
+    'SECRET_TOKEN': '08bfc664c3338d27ff9bc4c9dbe3cd1de9fd7f52',
+}
