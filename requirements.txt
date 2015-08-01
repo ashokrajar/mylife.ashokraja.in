@@ -13,4 +13,4 @@ pystache==0.5.4
 static==1.0.2
 wsgiref==0.1.2
 django-mongodb-engine==0.5.1
-opbeat=3.0.4
+opbeat==3.0.4
