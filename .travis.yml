@@ -19,7 +19,6 @@ cache:
 
 # command to install dependencies
 install:
-  - pip install .
   - pip install tox coverage unittest2 Flask-Testing
   - pip install -r requirements.txt
 
