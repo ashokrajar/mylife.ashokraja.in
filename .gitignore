@@ -62,3 +62,7 @@ target/
 
 # Jetbrains IDE
 .idea
+
+# Hugo guild dirs
+public/
+resources/
