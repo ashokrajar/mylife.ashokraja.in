@@ -8,25 +8,29 @@ on:
 
 jobs:
   build:
+    name: Build & Deploy
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-      with:
-        submodules: 'recursive'
 
-    - name: Install Hugo
-      run: sudo apt-get install hugo
-      
-    - name: Run a one-line script
-      run: hugo -D
+      - uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
 
-    - name: Deploy to WebServer
-      uses: burnett01/rsync-deployments@4.0
-      with:
-        switches: -avzr --delete
-        path: public/
-        remote_path: /var/www/html/
-        remote_host: mylife.ashokraja.in
-        remote_user: ashokraja
-        remote_key: ${{ secrets.DEPLOY_KEY }}
+      - name: Install Hugo
+        run: |
+          curl -LO https://github.com/gohugoio/hugo/releases/download/v0.69.0/hugo_0.69.0_Linux-64bit.deb
+          sudo dpkg -i hugo_0.69.0_Linux-64bit.deb
+
+      - name: Run a one-line script
+        run: hugo -D
+
+      - name: Deploy to WebServer
+        uses: burnett01/rsync-deployments@4.0
+        with:
+          switches: -avzr --delete
+          path: public/
+          remote_path: /var/www/html/
+          remote_host: mylife.ashokraja.in
+          remote_user: ashokraja
+          remote_key: ${{ secrets.DEPLOY_KEY }}
