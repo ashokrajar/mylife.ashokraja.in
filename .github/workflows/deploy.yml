@@ -9,9 +9,6 @@ jobs:
     name: Build & Deploy
     runs-on: ubuntu-latest
 
-    env:
-      REMOTE_PATH: ${GITHUB_REF##*/}
-
     steps:
 
       - uses: actions/checkout@v2
@@ -25,6 +22,10 @@ jobs:
 
       - name: Build Site
         run: hugo -D
+
+      - name: Set Remote Sync Path
+        run: |
+          echo "::set-env name=REMOTE_PATH::${GITHUB_REF##*/}"
 
       - name: Deploy to WebServer
         uses: burnett01/rsync-deployments@4.0
