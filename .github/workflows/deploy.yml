@@ -21,7 +21,9 @@ jobs:
           sudo dpkg -i hugo_0.69.0_Linux-64bit.deb
 
       - name: Build Site
-        run: hugo -D
+        run: |
+          rm -rfv public resources
+          hugo -D
 
       - name: Set Remote Sync Path
         run: |
