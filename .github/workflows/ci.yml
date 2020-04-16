@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [ master, dev, release/*]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
+
+      - name: Install Hugo
+        run: |
+          curl -LO https://github.com/gohugoio/hugo/releases/download/v0.69.0/hugo_0.69.0_Linux-64bit.deb
+          sudo dpkg -i hugo_0.69.0_Linux-64bit.deb
+
+      - name: Build Site
+        run: hugo -D
