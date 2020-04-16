@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [ master, dev, release/* ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install Hugo
+      run: sudo apt-get install hugo
+      
+    - name: Run a one-line script
+      run: hugo -D
+
+    - name: Deploy to WebServer
+      uses: burnett01/rsync-deployments@4.0
+      with:
+        switches: -avzr --delete
+        path: public/
+        remote_path: /var/www/html/
+        remote_host: mylife.ashokraja.in
+        remote_user: ashokraja
+        remote_key: ${{ secrets.DEPLOY_KEY }}
