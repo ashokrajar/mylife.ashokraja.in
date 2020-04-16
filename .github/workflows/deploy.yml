@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      REMOTE_PATH: "${{ GITHUB_REF##*/ }}"
+      REMOTE_PATH: "${GITHUB_REF##*/}"
 
     steps:
 
