@@ -25,7 +25,7 @@ jobs:
 
       - name: Set Remote Sync Path
         run: |
-          echo "::set-env name=REMOTE_PATH::${GITHUB_REF##*/}"
+          echo "::set-env name=REMOTE_PATH::/var/www/html/ashokraja.in/${GITHUB_REF##*/}/"
 
       - name: Deploy to WebServer
         uses: burnett01/rsync-deployments@4.0
