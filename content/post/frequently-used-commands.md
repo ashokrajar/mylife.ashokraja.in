@@ -7,7 +7,7 @@ title = "Linux/Mac Frequently Used Commands"
 highlight = "true"
 +++
 
-### Some of the very basic commands I use very freqently on my daily job on my Workstation(MacOS) & on the Remote servers(Linux).
+Some of the very basic commands I use very freqently on my daily job on my Workstation(MacOS) & on the Remote servers(Linux).
 
 <!--more-->
 

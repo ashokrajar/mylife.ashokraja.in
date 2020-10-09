@@ -4,4 +4,4 @@ install:
   - sudo dpkg -i hugo_0.69.0_Linux-64bit.deb
 
 script:
-  - hugo
+  - hugo -D
