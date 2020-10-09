@@ -8,14 +8,14 @@ thumbnailImagePosition = "left"
 thumbnailImage = "/img/thumbs/wakatime.png"
 +++
 
-It's really a informative cloud app to keep track your work timeline.
+It's really an informative cloud app to keep track of your coding timeline.
 <!--more-->
 
 ## Wakatime - A nice time tracking cloud application
 
 ![My Wakatime Dashboard](/img/wakatime.png)
 
-It has plugins to integrate with popular IDEs/Browsers/Editors. I primarily use it on 
+It has plugins to integrate with popular IDEs/Browsers/Editors. I primarily use it with, 
 
 - Pycharm
 - SublimeText
