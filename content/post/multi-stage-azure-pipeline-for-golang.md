@@ -20,6 +20,8 @@ keywords:
   - Azure Pipeline
   - Azure Pipeline Template
   - CI/CD Pipeline
+thumbnailImagePosition: "left"
+thumbnailImage: "/img/thumbs/azure-multistage.png"
 ---
 
 I have been playing around with Azure DevOps as part of my experiment with various CI/CD tools. I will be sharing my views and comparison of various CI/CD tools in a separate post.
