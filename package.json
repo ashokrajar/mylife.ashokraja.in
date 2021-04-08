@@ -1,9 +1,0 @@
-{
-  "_aerobatic": {
-    "build": {
-      "engine": "hugo",
-      "themeRepo": "https://github.com/sumaxime/hugo-sustain.git"
-    }
-  }
-}
-
