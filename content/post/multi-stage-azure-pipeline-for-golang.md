@@ -20,7 +20,6 @@ keywords:
   - Azure Pipeline
   - Azure Pipeline Template
   - CI/CD Pipeline
-thumbnailImagePosition: "left"
 thumbnailImage: "/img/thumbs/azure-multistage.png"
 ---
 
