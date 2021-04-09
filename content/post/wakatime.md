@@ -4,7 +4,6 @@ title = "Wakatime"
 tags = ["Programming", "Productivity", "TimeTracking"]
 description = "Wakatime - A nice time tracking cloud application."
 categories = ["Technologies", "Cloud", "TimeTracking", "Cloud Apps"]
-thumbnailImagePosition = "left"
 thumbnailImage = "/img/thumbs/wakatime.png"
 +++
 

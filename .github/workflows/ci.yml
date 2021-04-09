@@ -23,7 +23,7 @@ jobs:
           sudo dpkg -i hugo_0.76.3_Linux-64bit.deb
 
       - name: Build Site
-        run: hugo -D
+        run: hugo -D -b https://mylife-dev.ashokraja.in/
 
       - name: Set Remote Sync Path
         run: |
