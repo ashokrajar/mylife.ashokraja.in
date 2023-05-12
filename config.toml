@@ -42,9 +42,9 @@ googleAnalytics = "G-74MYY863SQ"
 [author]
   name = "Ashok Raja"
   email = "ashokraja.r@gmail.com"
-  bio = "I'm a Computer Engineer by profession and a Traveler in the heart. I love all things Computers, Travelling, Trekking and Biking."
+  bio = "I'm a Computer Engineer by profession and a Traveler by heart. I love all things Computers, Travelling, Trekking and Biking."
   job = "Root | Cloud Engineer | Practice DevOps"
-  location = "Bangalore"
+  location = "Dubai, UAE, Earth"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   gravatarEmail = "ashokraja.r@gmail.com"
   # Your Twitter username without the @. E.g : thibaudlepretre
