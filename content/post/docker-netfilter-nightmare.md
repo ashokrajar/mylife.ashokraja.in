@@ -140,3 +140,6 @@ To make it persist on system reboot,
 # Maximum number of allowed connection tracking entries
 net.netfilter.nf_conntrack_max = 600000
 ```
+
+### A similar nf_conntrack story
+* [https://blog.cloudflare.com/conntrack-tales-one-thousand-and-one-flows/](https://blog.cloudflare.com/conntrack-tales-one-thousand-and-one-flows/)
